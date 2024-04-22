@@ -30,7 +30,7 @@ header nav {
   z-index:9999;
 }
 
-.link {
+.navlink {
   width: fit-content;
   margin: auto;
   margin-right: 0;
@@ -78,3 +78,35 @@ nav a:hover {
 }
 
 /* End navbar*/
+
+/* Welcome section */
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    300deg,
+    rgba(225, 225, 229, 1) 0%,
+    rgba(240, 240, 240, 1) 34%,
+    rgba(205, 225, 229, 1) 100%
+  );
+}
+
+#welcome-section h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 6rem;
+  color: #43666d;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#welcome-section p {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-style: italic;
+}

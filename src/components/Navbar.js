@@ -1,11 +1,12 @@
 import "../App.css";
-
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const links = [
-    { name: "About", url: "https://www.google.com" },
-    { name: "Work", url: "https://www.youtube.com" },
-    { name: "Contact", url: "https://www.youtube.com" },
+    { name: "Home", url: "/" },
+    { name: "About", url: "/about" },
+    { name: "Resume", url: "/resume" },
+    { name: "Portfolio", url: "/portfolio" },
   ];
   return (
     <header>
@@ -14,13 +15,13 @@ function Navbar() {
           {/* Top Left corner add Name Logo */}
           <h1 id="name">Phi Long Nguyen</h1>
         </div>
-        <div className="link">
+        <div className="navlink">
           <ul>
             {/* Map over the links array and render a Link component for each link */}
             {links.map((link, index) => (
               <li key={index}>
                 {/* Render Link component with name and url from the current link object */}
-                <a href={link.url}>{link.name}</a>
+                <NavLink to={link.url}>{link.name}</NavLink>
               </li>
             ))}
           </ul>
