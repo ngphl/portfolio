@@ -1,7 +1,12 @@
 import "../App.css";
-import Link from "./Link";
+
 
 function Navbar() {
+  const links = [
+    { name: "About", url: "https://www.google.com" },
+    { name: "Work", url: "https://www.youtube.com" },
+    { name: "Contact", url: "https://www.youtube.com" },
+  ];
   return (
     <header>
       <nav id="navbar">
@@ -11,16 +16,13 @@ function Navbar() {
         </div>
         <div className="link">
           <ul>
-            <li>
-              {/* Change the URL later*/}
-              <Link name="About" url="https://www.google.com" />
-            </li>
-            <li>
-              <Link name="Work" url="https://www.youtube.com" />
-            </li>
-            <li>
-              <Link name="Contact" url="https://www.youtube.com" />
-            </li>
+            {/* Map over the links array and render a Link component for each link */}
+            {links.map((link, index) => (
+              <li key={index}>
+                {/* Render Link component with name and url from the current link object */}
+                <a href={link.url}>{link.name}</a>
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
