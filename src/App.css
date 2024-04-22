@@ -38,6 +38,7 @@ header nav {
 
 .logo {
   margin-left: 20px;
+  user-select: none;
 }
 
 #name {
