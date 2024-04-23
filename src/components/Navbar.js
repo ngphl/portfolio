@@ -1,5 +1,11 @@
 import "../App.css";
 import { NavLink } from "react-router-dom";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
+const activeStyle = {
+  fontWeight: "bold",
+};
+
 
 function Navbar() {
   const links = [
@@ -21,7 +27,12 @@ function Navbar() {
             {links.map((link, index) => (
               <li key={index}>
                 {/* Render Link component with name and url from the current link object */}
-                <NavLink to={link.url}>{link.name}</NavLink>
+                <NavLink
+                  to={link.url}
+                  style={({ isActive }) => (isActive ? activeStyle : null)}
+                >
+                  {link.name}
+                </NavLink>
               </li>
             ))}
           </ul>
