@@ -28,6 +28,7 @@ function Home() {
             ))}
           </div>
         </section>
+        {/*End more section*/}
       </section>
       {/* End Welcome Section*/}
     </>
