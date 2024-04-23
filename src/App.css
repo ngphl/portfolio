@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap");
 /* import bootstrap icon */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+
 :root {
   --main-white: #f0f0f0;
   --main-red: #be3144;
@@ -10,8 +12,12 @@
 }
 
 /* body style */
+
 body {
   font-family: "Poppins", sans-serif;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
 }
 
 * {
@@ -29,7 +35,7 @@ header nav {
   background: #557b83;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   color: var(--main-white);
-  z-index:9999;
+  z-index: 9999;
 }
 
 .navlink {
@@ -40,6 +46,7 @@ header nav {
 
 .logo {
   margin-left: 20px;
+  padding-top: 5px;
   user-select: none;
 }
 
@@ -58,7 +65,6 @@ nav ul {
 }
 
 nav li {
-
   list-style: none;
 }
 
@@ -79,7 +85,6 @@ nav a:hover {
   transition: background-color 0.5s;
 }
 
-
 /* End navbar*/
 
 /* Welcome section */
@@ -88,21 +93,13 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(
-    300deg,
-    rgba(225, 225, 229, 1) 0%,
-    rgba(240, 240, 240, 1) 34%,
-    rgba(205, 225, 229, 1) 100%
-  );
+  margin: 200px;
 }
 
 .welcome-font-header {
   font-family: "Raleway", sans-serif;
   font-size: 5rem;
-  color: #43666d;
+  color: var(--main-white);
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -111,27 +108,27 @@ nav a:hover {
   font-size: 2rem;
   margin-top: 0;
   margin-bottom: 0;
-  font-style: italic;
+  color: var(--main-white);
 }
 
 /* End welcome section */
 
 /* Start contact */
 .more-header p {
-  margin-top:20%;
+  margin-top: 20%;
   margin-bottom: 0;
   font-size: 2rem;
   text-align: center;
-
+  color: var(--main-white);
 }
 
 .more-link {
-  margin:0;
+  margin: 0;
 }
 
 .more-detail {
   text-decoration: none;
-  color: var(--main-gray);
+  color: var(--main-white);
   margin: 20px;
   font-size: 2.2rem;
   display: inline-block; /* Add this line */
@@ -144,36 +141,52 @@ nav a:hover {
 
 /*Footer */
 .footer-basic {
-  padding:10px 0;
-  background-color:#ffffff;
-  color:#4b4c4d;
+  background-color: #ffffff;
+  color: #4b4c4d;
 }
 
 .footer-basic ul {
-  padding:0;
-  list-style:none;
-  text-align:center;
-  font-size:18px;
-  line-height:1.6;
-  margin-bottom:0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
 }
 
 .footer-basic li {
-  padding:0 10px;
+  padding: 0 10px;
 }
 
 .footer-basic ul a {
-  color:inherit;
-  text-decoration:none;
-  opacity:0.8;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
 }
 
 .footer-basic ul a:hover {
-  opacity:1;
+  opacity: 1;
 }
-
-
 
 /* Credit to https://epicbootstrap.com/snippets/footer-basic */
 
 /*End Footer */
+
+/* hero */
+.hero {
+  margin-top: 50px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./assets/hero.jpg");
+  height: 75vh;
+  max-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* Prevent content from overflowing */
+  overflow: hidden;
+}
+/* end hero */
+
+
+/* About section */

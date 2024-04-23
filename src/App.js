@@ -1,5 +1,4 @@
 /*Import Section */
-import logo from "./logo.svg";
 import "./App.css";
 
 import {
@@ -46,7 +45,7 @@ const route = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={route}/>
+    <RouterProvider router={route}/> 
   );
 }
 
