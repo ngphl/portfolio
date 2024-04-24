@@ -15,6 +15,7 @@
 body {
   font-family: "Poppins", sans-serif;
   margin: 0px;
+  padding-top: 50px;
   height: 100%;
   width: 100%;
 }
@@ -33,7 +34,7 @@ header nav {
   width: 100%;
   background: var(--main-gray);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-  
+
   color: var(--main-white);
   z-index: 9999;
 }
@@ -141,7 +142,7 @@ nav a:hover {
 
 /*Footer */
 .footer-basic {
-  background-color: #2D3748;
+  background-color: #2d3748;
   color: var(--main-white);
 }
 
@@ -174,7 +175,6 @@ nav a:hover {
 
 /* hero */
 .hero {
-  margin-top: 50px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./assets/hero.jpg");
   height: 100vh;
@@ -190,14 +190,13 @@ nav a:hover {
 
 /* About-introduction section */
 .intro-div {
-  margin-top: 50px;
   padding-bottom: 75px;
   height: 100vh;
-  display: flex;  
+  display: flex;
   background-color: var(--main-white);
 }
 
-.introduction { 
+.introduction {
   font-family: "Poppins", sans-serif;
   margin: auto;
   margin-right: 0;
@@ -205,18 +204,17 @@ nav a:hover {
   flex-direction: column;
 }
 
-.introduction h1{
+.introduction h1 {
   font-size: 4rem;
 }
 
-.introduction p{
+.introduction p {
   font-size: 1.5rem;
 }
 
 .profile {
   margin: auto;
   margin-left: 200px;
-
   width: 350px;
   height: 350px;
 }
@@ -224,7 +222,7 @@ nav a:hover {
 /* About me section */
 
 .about-section {
-  background-color: #2D3748;
+  background-color: #2d3748;
   color: var(--main-white);
   width: 100%;
   display: flex;
@@ -241,7 +239,7 @@ nav a:hover {
   flex-direction: row;
 }
 
-.about-me p{
+.about-me p {
   margin-top: 20px;
   font-size: 20px;
 }
@@ -254,33 +252,38 @@ nav a:hover {
 
 /* End About section */
 
-.history {
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: auto;
-  background-color: pink;
+/* Resume section */
+
+/* Skill section */
+
+.overview-section {
+  background-color: var(--main-white);
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
 }
 
-.resume,
-.education {
-  flex: 1; /* Make both sections grow to occupy available space */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.resume {
-  background-color: purple;
-  margin-left: 100px;
-}
-
-.education {
+.summary {
+  margin-left: 20vh;
+  padding-top: 20vh;
   display: flex;
   flex-direction: column;
-  background-color: red;
-  margin-right: 100px;
+  align-items: flex-start;
 }
 
+.summary h1 {
+  font-size: 4rem;
+}
 
+.summary p {
+  font-size: 1.5rem;
+}
+
+.skill-summary {
+  width: 50%;
+}
+
+.experience-summary {
+  width: 60%;
+  align-self: flex-end;
+  margin: 50px;
+}

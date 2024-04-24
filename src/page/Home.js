@@ -9,7 +9,6 @@ const links = [
 
 function Home() {
   return (
-    <>
       <div className="hero">
         {/* Welcome Section*/}
         <section id="welcome-section">
@@ -32,8 +31,6 @@ function Home() {
           {/*End more section*/}
         </section>
       </div>
-      {/* End Welcome Section*/}
-    </>
   );
 }
 
