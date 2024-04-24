@@ -5,12 +5,14 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import Root from "./page/Root";
 import Home from "./page/Home";
 import About from "./page/About";
 import Resume from "./page/Resume";
 import Portfolio from "./page/Portfolio";
+
 /*Import Section */
 
 

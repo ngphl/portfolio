@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 function Footer() {
   return (
-    <div className="footer-basic">
+    <div className="footer-basic" >
       <footer>
         <ul className="list-inline">
           <li className="list-inline-item">

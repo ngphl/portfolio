@@ -33,6 +33,7 @@ header nav {
   width: 100%;
   background: var(--main-gray);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  
   color: var(--main-white);
   z-index: 9999;
 }
@@ -92,7 +93,7 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 200px;
+  margin: 300px;
 }
 
 .welcome-font-header {
@@ -140,8 +141,8 @@ nav a:hover {
 
 /*Footer */
 .footer-basic {
-  background-color: #ffffff;
-  color: #4b4c4d;
+  background-color: #2D3748;
+  color: var(--main-white);
 }
 
 .footer-basic ul {
@@ -176,7 +177,7 @@ nav a:hover {
   margin-top: 50px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./assets/hero.jpg");
-  height: 75vh;
+  height: 100vh;
   max-width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -187,14 +188,12 @@ nav a:hover {
 }
 /* end hero */
 
-/* About section */
-.about {
+/* About-introduction section */
+.intro-div {
   margin-top: 50px;
-  height: 75vh;
-  display: flex;
-  flex-direction:row;
-  justify-content: center;
-  align-items: center;
+  padding-bottom: 75px;
+  height: 100vh;
+  display: flex;  
   background-color: var(--main-white);
 }
 
@@ -217,10 +216,43 @@ nav a:hover {
 .profile {
   margin: auto;
   margin-left: 200px;
-  width: 400px;
-  height: 400px;
+
+  width: 350px;
+  height: 350px;
 }
 
+/* About me section */
+
+.about-section {
+  background-color: #2D3748;
+  color: var(--main-white);
+  width: 100%;
+  display: flex;
+}
+
+.description {
+  width: 50%;
+}
+
+.about-me {
+  padding: 100px;
+  padding-left: 200px;
+  display: flex;
+  flex-direction: row;
+}
+
+.about-me p{
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.qut-logo {
+  margin: auto;
+  width: 640px;
+  height: auto;
+}
+
+/* End About section */
 
 .history {
   width: 50%;
@@ -250,3 +282,5 @@ nav a:hover {
   background-color: red;
   margin-right: 100px;
 }
+
+
