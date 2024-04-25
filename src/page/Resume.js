@@ -1,4 +1,25 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+const languages = [
+  "C#",
+  "F#",
+  "Javascript",
+  "Java",
+  "HTML",
+  "CSS",
+  "R",
+  "Python & Libraries",
+];
+const skills = [
+  "Object-Oriented Programming",
+  "Functional Programming",
+  "Machine Learning",
+  "Data Visualization",
+  "Git",
+  "Agile",
+  "TestRail",
+];
 
 function Resume() {
   return (
@@ -32,7 +53,27 @@ function Resume() {
           </div>
         </div>
       </div>
-      <div className="skills"></div>
+      <div className="skills-section">
+        <h1>Skillset</h1>
+        <div className="skills-list">
+          <div className="skills-category rounded">
+            <h3 className="fw-semibold">Languages</h3>
+            <ul>
+              {languages.map((language, index) => (
+                <li id={index}>{language}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="skills-category rounded">
+            <h3 className="fw-semibold">Technical Skill</h3>
+            <ul>
+              {skills.map((skill, index) => (
+                <li id={index}>{skill}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
       <div className="career"></div>
       <div className="education"></div>
       <div className="outputs"></div>
