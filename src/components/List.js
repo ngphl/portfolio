@@ -4,11 +4,13 @@ const listStyle = {
   listStyleType: "none",
 };
 
-function List({coursework}) {
+function List({array}) {
   return (
     <ul>
-      {coursework.map((subject, index) => (
-        <li style={listStyle} key={index}>{subject.name}</li>
+      {array.map((item, index) => (
+        <li style={listStyle} key={index}>
+          {item}
+        </li>
       ))}
     </ul>
   );

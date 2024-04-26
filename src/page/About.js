@@ -1,8 +1,5 @@
 import React from "react";
-import List from "../components/List";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-const course = [{ name: "IFN666", gpa: 4.0 }];
 
 function About() {
   return (

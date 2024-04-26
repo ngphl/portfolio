@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import List from "../components/List";
 
 const languages = [
   "C#",
@@ -16,6 +17,7 @@ const skills = [
   "Functional Programming",
   "Machine Learning",
   "Data Visualization",
+  "Data Analytic",
   "Git",
   "Agile",
   "TestRail",
@@ -89,19 +91,11 @@ function Resume() {
         <div className="skills-list">
           <div className="skills-category rounded">
             <h3 className="fw-semibold">Languages</h3>
-            <ul>
-              {languages.map((language, index) => (
-                <li id={index}>{language}</li>
-              ))}
-            </ul>
+            <List array={languages}></List>
           </div>
           <div className="skills-category rounded">
             <h3 className="fw-semibold">Technical Skill</h3>
-            <ul>
-              {skills.map((skill, index) => (
-                <li id={index}>{skill}</li>
-              ))}
-            </ul>
+            <List array={skills}></List>
           </div>
         </div>
       </section>
@@ -152,14 +146,9 @@ function Resume() {
         </div>
         <div className="education">
           <h2>Notable Course</h2>
-          <ul>
-            {coursework.map((unit, index) => (
-              <li key="index">{unit}</li>
-            ))}
-          </ul>
+          <List array={coursework}></List>
         </div>
       </section>
-      <div className="outputs"></div>
     </>
   );
 }
