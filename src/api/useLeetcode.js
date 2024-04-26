@@ -1,15 +1,16 @@
+import { LeetCode } from "leetcode-query";
 import React, { useState, useEffect } from "react";
 
-function useGithub() {
+function useLeetcode() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [github, setGithub] = useState([]);
+  const [leetcode, setLeetcode] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getRepo();
-        setGithub(data);
+        const data = await getLeetcode();
+        setLeetcode(data);
         setLoading(false);
       } catch (error) {
         setError(error);
@@ -22,18 +23,24 @@ function useGithub() {
 
   return {
     loading,
-    github,
+    leetcode,
     error,
   };
 }
 
-export default useGithub;
+export default useLeetcode;
 
-async function getRepo() {
-  const url = "https://api.github.com/users/ngphl/repos";
+
+
+async function getLeetcode() {
+/*Backup URL API https://leetcodestats.cyclic.app/{USERNAME} */
+  const url = "https://leetcode-api-faisalshohag.vercel.app/npl2468";
   const response = await fetch(url);
   if (!response.ok) {
-    throw new Error("Failed to fetch data from GitHub API");
+    throw new Error("Failed to fetch data from Leetcode API");
   }
   return await response.json();
 }
+
+
+
