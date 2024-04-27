@@ -9,7 +9,13 @@ function useGithub() {
     const fetchData = async () => {
       try {
         const data = await getRepo();
-        setGithub(data);
+        const reposWithUnknownLanguage = data.map((repo) => ({
+          ...repo,
+          language: repo.language || "Unknown",
+          description: repo.description || "No Description",
+          license: repo.license || "Null"
+        }));
+        setGithub(reposWithUnknownLanguage);
         setLoading(false);
       } catch (error) {
         setError(error);

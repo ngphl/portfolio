@@ -642,7 +642,7 @@ ul.timeline-list li:before {
 
 /*Leetcode section */
 .leetcode-heading {
-  margin: 50px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -650,13 +650,15 @@ ul.timeline-list li:before {
 }
 
 .leetcode-point {
-  margin-top: 50px;
+  margin: 20px;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
 }
 
 .leetcode-problem {
   margin: 50px;
+  margin-left: 170px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -692,9 +694,26 @@ ul.timeline-list li:before {
 .leetcode-stat {
   margin: 10px;
   display: flex;
-
   justify-content: space-evenly;
   align-items: center;
 }
 
 /* End Porfolio Section */
+
+/* More detail project */
+.more-detail-project {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.more-detail-project ul {
+  width: auto;
+}
+
+.more-detail-project li, .more-detail-project a {
+  font-size: 20px;
+}

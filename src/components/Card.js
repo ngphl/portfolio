@@ -1,27 +1,35 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { NavLink } from "react-router-dom";
 
-function Card({key,name,url,description,languages}) {
+function Card({repo}) {
   return (
     <div className="box blue">
-      <h2>{name}</h2>
-      <p>{description}</p>
-      <h3 className="lang">Tools - {languages}</h3>
+      <h2>{repo.name}</h2>
+      <p>{repo.description}</p>
+      <h3 className="lang">Tools - {repo.language}</h3>
       <div>
         <a
-          href={url}
+          href={repo.html_url}
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-outline-primary github"
         >
           Github
         </a>
-        <button
-          type="button"
-          className="btn btn-outline-primary btn-more-detail"
+        <NavLink
+          to="/project"
+          state={{
+            repo: { repo },
+          }}
         >
-          More detail
-        </button>
+          <button
+            type="button"
+            className="btn btn-outline-primary btn-more-detail"
+          >
+            More detail
+          </button>
+        </NavLink>
       </div>
     </div>
   );

@@ -8,14 +8,8 @@ function Portfolio() {
   const { loading_lc, leetcode, error_lc } = useLeetcode();
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Replace null languages with "Unknown"
-  const reposWithUnknownLanguage = github.map((repo) => ({
-    ...repo,
-    language: repo.language || "Unknown",
-  }));
-
   // Filter repositories based on search term
-  const filteredRepos = reposWithUnknownLanguage.filter((repo) => {
+  const filteredRepos = github.filter((repo) => {
     // Filter by name or language
     return (
       repo.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -45,7 +39,7 @@ function Portfolio() {
         </div>
         {/* Search box */}
       </div>
-      <hr className="divider" />
+
       {loading ? (
         <h1 className="problem">Loading...</h1>
       ) : error ? (
@@ -53,75 +47,77 @@ function Portfolio() {
       ) : (
         <div className="porfolio-work">
           {filteredRepos.map((repo) => (
-            <Card
-              key={repo.id}
-              name={repo.name}
-              url={repo.html_url}
-              description={repo.description}
-              languages={repo.language}
-            />
+            <Card repo={repo} />
           ))}
         </div>
       )}
       <hr className="divider" />
-      <div className="leetcode-section">
-        <div className="leetcode-heading">
-          <h1>I also do Leetcode!</h1>
-          <a
-            href="https://leetcode.com/u/npl2468/"
-            style={{ textDecoration: "none" }}
-          >
-            <h4>My Profile</h4>
-          </a>
-        </div>
-      </div>
-      <div className="leetcode-info">
-        <div className="leetcode-point">
-          <h3>Ranking: {leetcode.ranking}</h3>
-          <h3>Contribution Point: {leetcode.contributionPoint}</h3>
-        </div>
-        <div className="leetcode-stat">
-          <div className="leetcode-problem">
-            <h1 className="leetcode-title">Problem Solved:</h1>
-            <h3>
-              {leetcode.easySolved} <span className="easy">Easy</span>
-            </h3>
-            <h3>
-              {leetcode.mediumSolved} <span className="medium">Medium</span>
-            </h3>
-            <h3>
-              {leetcode.hardSolved} <span className="hard">Hard</span>
-            </h3>
-          </div>
-          <div className="leetcode-recent-problems">
-            <h1 className="leetcode-title">Recent Problems:</h1>
-            <div className="three-problem">
-              {leetcode.recentSubmissions &&
-                leetcode.recentSubmissions
-                  .reduce((uniqueSubmissions, submission) => {
-                    // Check if the title is not already in the uniqueSubmissions array
-                    if (
-                      !uniqueSubmissions.find(
-                        (uniqueSubmission) =>
-                          uniqueSubmission.title === submission.title
-                      )
-                    ) {
-                      uniqueSubmissions.push(submission);
-                    }
-                    return uniqueSubmissions;
-                  }, [])
-                  .slice(0, 3)
-                  .map((submission, index) => (
-                    <div key={index}>
-                      <h3>
-                        {submission.title}: {submission.statusDisplay}
-                      </h3>
-                    </div>
-                  ))}
+      {loading_lc ? (
+        <h1 className="problem">Loading...</h1>
+      ) : error_lc ? (
+        <h1 className="problem">{error.toString()}</h1>
+      ) : (
+        <section>
+          <div className="leetcode-section">
+            <div className="leetcode-heading">
+              <h1>I also do Leetcode!</h1>
+              <a
+                href="https://leetcode.com/u/npl2468/"
+                style={{ textDecoration: "none" }}
+              >
+                <h4>My Profile</h4>
+              </a>
             </div>
           </div>
-        </div>
-      </div>
+          <div className="leetcode-info">
+            <div className="leetcode-point">
+              <h3>Ranking: {leetcode.ranking}</h3>
+              <h3>Contribution Point: {leetcode.contributionPoint}</h3>
+            </div>
+            <div className="leetcode-stat">
+              <div className="leetcode-problem">
+                <h1 className="leetcode-title">Problem Solved:</h1>
+                <h3>
+                  {leetcode.easySolved} <span className="easy">Easy</span>
+                </h3>
+                <h3>
+                  {leetcode.mediumSolved} <span className="medium">Medium</span>
+                </h3>
+                <h3>
+                  {leetcode.hardSolved} <span className="hard">Hard</span>
+                </h3>
+              </div>
+              <div className="leetcode-recent-problems">
+                <h1 className="leetcode-title">Recent Problems:</h1>
+                <div className="three-problem">
+                  {leetcode.recentSubmissions &&
+                    leetcode.recentSubmissions
+                      .reduce((uniqueSubmissions, submission) => {
+                        // Check if the title is not already in the uniqueSubmissions array
+                        if (
+                          !uniqueSubmissions.find(
+                            (uniqueSubmission) =>
+                              uniqueSubmission.title === submission.title
+                          )
+                        ) {
+                          uniqueSubmissions.push(submission);
+                        }
+                        return uniqueSubmissions;
+                      }, [])
+                      .slice(0, 3)
+                      .map((submission, index) => (
+                        <div key={index}>
+                          <h3>
+                            {submission.title}: {submission.statusDisplay}
+                          </h3>
+                        </div>
+                      ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
     </section>
   );
 }
