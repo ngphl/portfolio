@@ -148,6 +148,13 @@ nav a:hover {
 }
 
 /*Footer */
+footer {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .footer-basic {
   background-color: #2d3748;
   color: var(--main-white);
@@ -505,7 +512,10 @@ ul.timeline-list li:before {
 /* start Porfolio section */
 .portfolio-section {
   background-color: var(--main-white);
+  height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .porfolio-heading {
@@ -641,6 +651,10 @@ ul.timeline-list li:before {
 }
 
 /*Leetcode section */
+.leetcode-section{
+  height: 100%;
+}
+
 .leetcode-heading {
   margin-top: 50px;
   display: flex;
@@ -692,7 +706,6 @@ ul.timeline-list li:before {
 }
 
 .leetcode-stat {
-  margin: 10px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
