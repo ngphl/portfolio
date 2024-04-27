@@ -55,7 +55,7 @@ API:
 - useGithub: Fetch data for Portfolio.js and Page.js
 - useLeetcode: Fetch data for Portfolio.js
 
-## Available Scripts
+## Scripts
 
 In the project directory, you can run:
 
