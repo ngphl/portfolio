@@ -37,6 +37,22 @@ Leetcode and Github API to fetch data located in "API" folder
 
 All assets such as pictures are located in "assets" folder.
 
+App.js with RouterProvider to route to all the page
+![image](https://github.com/ngphl/portfolio/assets/72726562/857734a3-356a-45f2-9a84-6df4c7b6f209)
+
+Root.js with Navbar, outlet to all other pages, and footer
+![image](https://github.com/ngphl/portfolio/assets/72726562/81200a13-335f-4f65-ad23-3d0564051341)
+
+Components:
+ - Card.js : used in Portfolio.js
+ - Footer.js : footer
+ - Navbar.js: Navigation bar
+ - List.js: Convenient List to display all list item in default style
+
+API:
+- useGithub: Fetch data for Portfolio.js and Page.js
+- useLeetcode: Fetch data for Portfolio.js
+
 ## Available Scripts
 
 In the project directory, you can run:
