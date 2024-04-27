@@ -59,7 +59,7 @@ function Portfolio() {
       {loading_lc ? (
         <h1 className="problem">Loading...</h1>
       ) : error_lc ? (
-        <h1 className="problem">{error.toString()}</h1>
+        <h1 className="problem">{error_lc.toString()}</h1>
       ) : (
         <section>
           <div className="leetcode-section">
