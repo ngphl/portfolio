@@ -19,6 +19,7 @@ function Navbar() {
       <nav id="navbar">
         <div className="logo">
           {/* Top Left corner add Name Logo */}
+          <img src={require("../assets/logo512.png")} className="logo-icon" />
           <h1 id="name">Phi Long Nguyen</h1>
         </div>
         <div className="navlink">

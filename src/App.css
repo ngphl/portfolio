@@ -54,9 +54,18 @@ header nav {
 }
 
 .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
   margin-left: 20px;
   padding-top: 5px;
   user-select: none;
+}
+
+.logo-icon {
+  width: 32px;
+  height: auto;
 }
 
 #name {
