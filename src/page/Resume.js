@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import List from "../components/List";
 
+/* Arrays of features */
 const languages = [
   "C#",
   "F#",
@@ -55,9 +56,12 @@ const coursework = [
   "Computational Explorations",
 ];
 
+/* End Arrays of features */
+
 function Resume() {
   return (
     <>
+      {/* Overview section */}
       <section className="overview-section">
         <div className="summary">
           <div className="skill-summary">
@@ -86,6 +90,7 @@ function Resume() {
           </div>
         </div>
       </section>
+      {/* Skills section */}
       <section className="skills-section">
         <h1>Skillset</h1>
         <div className="skills-list">
@@ -112,7 +117,7 @@ function Resume() {
           <div className="row">
             <div className="col-xl-12">
               <ul className="timeline-list">
-                {/* Single Experience */}
+                {/* Map every Single Experience */}
                 {career.map((work, index) => (
                   <li key={index}>
                     <div className="timeline_content">
@@ -128,6 +133,7 @@ function Resume() {
         </div>
       </section>
       <hr className="divider"></hr>
+      {/*Education Section*/}
       <section className="education-section">
         <div className="education-introduction">
           <div className="text-container">
@@ -144,6 +150,7 @@ function Resume() {
             className="logo-small"
           />
         </div>
+        {/* Map notable coursework */}
         <div className="education">
           <h2>Notable Course</h2>
           <List array={coursework}></List>

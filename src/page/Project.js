@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Project() {
+  /* Location to find where Project and State was input */
   const location = useLocation();
   const { repo } = location.state.repo;
 
@@ -10,6 +11,7 @@ function Project() {
     <div className="more-detail-project">
       <h1>{repo.name} Detail</h1>
       <ul className="list-group">
+        {/* List out the repo's key detail */}
         <li className="list-group-item">ID: {repo.id}</li>
         <li className="list-group-item">Name: {repo.name}</li>
         <li className="list-group-item">

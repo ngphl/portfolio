@@ -1,12 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const links = [
-  { name: "About", url: "/about" },
-  { name: "Resume", url: "/resume" },
-  { name: "Portfolio", url: "/portfolio" },
-];
-
+/* Contact me Link */
 const contactMe = [
   {
     where: "Linkedin",
@@ -30,7 +25,7 @@ function Home() {
         <h1 className="welcome-font-header">Hey I'm Long</h1>
         <p className="welcome-font-p">Master student at QUT</p>
         <p className="welcome-font-p">welcome to my portfolio website</p>
-        {/*More section*/}
+        {/*Contact me section*/}
         <section>
           <div className="more-header">
             <p>Contact me</p>

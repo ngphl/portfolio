@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { NavLink } from "react-router-dom";
 
+/* Array of contact item */
 const contactMe = [
   {
     where: "Linkedin",
@@ -38,8 +39,9 @@ function Footer() {
           </ul>
         </div>
         <div>
+          {/*Map out each contact item */}
           <ul className="list-inline">
-            {contactMe.map((contact,key)=>(
+            {contactMe.map((contact, key) => (
               <li className="list-inline-item" key={key}>
                 <a href={contact.url}>{contact.where}</a>
               </li>

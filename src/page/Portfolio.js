@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Card from "../components/Card";
 import useGithub from "../api/useGithub";
 import useLeetcode from "../api/useLeetcode";
@@ -19,10 +19,12 @@ function Portfolio() {
 
   return (
     <section className="portfolio-section">
+      {/* Heading */}
       <div className="porfolio-heading">
         <h1>Portfolio</h1>
         <h4>Some of my work</h4>
         <div className="form__group field">
+          {/* Search field to find specific Repo */}
           <input
             type="input"
             className="form__field"
@@ -40,6 +42,7 @@ function Portfolio() {
         {/* Search box */}
       </div>
 
+      {/*Check if API is still loading/error/finished and Map each Repo into Cards*/}
       {loading ? (
         <h1 className="problem">Loading...</h1>
       ) : error ? (
@@ -52,6 +55,7 @@ function Portfolio() {
         </div>
       )}
       <hr className="divider" />
+      {/*Check if API is still loading/error/finished and Display Leetcode information*/}
       {loading_lc ? (
         <h1 className="problem">Loading...</h1>
       ) : error_lc ? (
@@ -59,6 +63,7 @@ function Portfolio() {
       ) : (
         <section>
           <div className="leetcode-section">
+            {/*Heading*/}
             <div className="leetcode-heading">
               <h1>I also do Leetcode!</h1>
               <a
@@ -69,6 +74,7 @@ function Portfolio() {
               </a>
             </div>
           </div>
+          {/* Info section */}
           <div className="leetcode-info">
             <div className="leetcode-point">
               <h3>Ranking: {leetcode.ranking}</h3>
@@ -76,6 +82,7 @@ function Portfolio() {
             </div>
             <div className="leetcode-stat">
               <div className="leetcode-problem">
+                {/*Display Easy/Medium/Hard problem solved */}
                 <h1 className="leetcode-title">Problem Solved:</h1>
                 <h3>
                   {leetcode.easySolved} <span className="easy">Easy</span>
@@ -88,12 +95,13 @@ function Portfolio() {
                 </h3>
               </div>
               <div className="leetcode-recent-problems">
+                {/* Display Most 3 recent Unique Problem */}
                 <h1 className="leetcode-title">Recent Problems:</h1>
                 <div className="three-problem">
                   {leetcode.recentSubmissions &&
                     leetcode.recentSubmissions
                       .reduce((uniqueSubmissions, submission) => {
-                        // Check if the title is not already in the uniqueSubmissions array
+                        // Check if the title is not already in the uniqueSubmissions array (Function by ChatGPT)
                         if (
                           !uniqueSubmissions.find(
                             (uniqueSubmission) =>
