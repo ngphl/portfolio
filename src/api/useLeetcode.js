@@ -31,7 +31,7 @@ export default useLeetcode;
 
 async function getLeetcode() {
   /*Backup URL API https://leetcodestats.cyclic.app/{USERNAME} */
-  const url = "https://leetcode-api-faisalshohag.vercel.app/npl2468";
+  const url = "https://leetcode-api-faisalshohag.vercel.appd/npl2468";
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error("Failed to fetch data from Leetcode API");

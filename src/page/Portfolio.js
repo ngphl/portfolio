@@ -59,7 +59,9 @@ function Portfolio() {
       {loading_lc ? (
         <h1 className="problem">Loading...</h1>
       ) : error_lc ? (
-        <h1 className="problem">{error_lc.toString()}</h1>
+        <h1 className="problem">
+          Error: Failed to fetch data from Leetcode API
+        </h1>
       ) : (
         <section>
           <div className="leetcode-section">
