@@ -140,3 +140,6 @@ If you encounter any issues with the application or have suggestions for improve
 
 6. Click on the "Submit new issue" button to create the issue.
 
+OR
+
+Send me an email at: longsworkspace@gmail.com
