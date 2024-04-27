@@ -1,9 +1,8 @@
-import { LeetCode } from "leetcode-query";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function useLeetcode() {
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [loading_lc, setLoading] = useState(true);
+  const [error_lc, setError] = useState(null);
   const [leetcode, setLeetcode] = useState({});
 
   useEffect(() => {
@@ -22,18 +21,16 @@ function useLeetcode() {
   }, []);
 
   return {
-    loading,
+    loading_lc,
     leetcode,
-    error,
+    error_lc,
   };
 }
 
 export default useLeetcode;
 
-
-
 async function getLeetcode() {
-/*Backup URL API https://leetcodestats.cyclic.app/{USERNAME} */
+  /*Backup URL API https://leetcodestats.cyclic.app/{USERNAME} */
   const url = "https://leetcode-api-faisalshohag.vercel.app/npl2468";
   const response = await fetch(url);
   if (!response.ok) {
@@ -41,6 +38,3 @@ async function getLeetcode() {
   }
   return await response.json();
 }
-
-
-
