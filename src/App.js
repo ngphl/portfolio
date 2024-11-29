@@ -13,43 +13,29 @@ import Project from "./page/Project";
 /*Import Section */
 
 /* Create route */
-const route = createBrowserRouter([
+const route = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Root />,
+      children: [
+        { path: "/", element: <Home /> },
+        { path: "/about", element: <About /> },
+        { path: "/resume", element: <Resume /> },
+        { path: "/portfolio", element: <Portfolio /> },
+        { path: "/project", element: <Project /> },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <Root />,
-
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-
-      {
-        path: "/about",
-        element: <About />,
-      },
-
-      {
-        path: "/resume",
-        element: <Resume />,
-      },
-      {
-        path: "/portfolio",
-        element: <Portfolio />,
-      },
-      {
-        path: "/project",
-        element: <Project />,
-      },
-    ],
-  },
-]);
+    basename: "/portfolio",
+  }
+);
 
 function App() {
   return (
     <>
       <RouterProvider router={route} />
-      <Home />
     </>
   );
 }
