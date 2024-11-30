@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const contactMe = [
   {
     where: "Linkedin",
-    url: "https://www.linkedin.com/in/long-nguyen-290702247/",
+    url: "https://www.linkedin.com/in/felix-nguyen-290702247/",
   },
   {
     where: "Github",
@@ -49,7 +49,7 @@ function Footer() {
           </ul>
         </div>
         <li className="list-inline-item">
-          Copyright © 2024 Long Nguyen, Built with React.
+          Copyright © 2024 Felix Nguyen, Built with React.
         </li>
       </footer>
     </div>

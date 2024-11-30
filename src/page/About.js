@@ -9,6 +9,10 @@ function About() {
         <div className="introduction">
           <h1>This is my space</h1>
           <p>I study Data Science at QUT, and I like to learn and teach!</p>
+          <p>
+            Err I'm still looking for a professional image, so for now enjoy
+            this goofy cat!
+          </p>
         </div>
         <div class="profile">
           <img

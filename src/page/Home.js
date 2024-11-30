@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const contactMe = [
   {
     where: "Linkedin",
-    url: "https://www.linkedin.com/in/long-nguyen-290702247/",
+    url: "https://www.linkedin.com/in/felix-nguyen-290702247/",
   },
   {
     where: "Github",
@@ -22,7 +22,7 @@ function Home() {
     <div className="hero">
       {/* Welcome Section*/}
       <section id="welcome-section">
-        <h1 className="welcome-font-header">Hey I'm Long</h1>
+        <h1 className="welcome-font-header">Hey I'm Felix</h1>
         <p className="welcome-font-p">Master student at QUT</p>
         <p className="welcome-font-p">welcome to my portfolio website</p>
         {/*Contact me section*/}
