@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.3e9a9a05.css",
-    "main.js": "/portfolio/static/js/main.847987c7.js",
+    "main.css": "/portfolio/static/css/main.17cc72c2.css",
+    "main.js": "/portfolio/static/js/main.081cbec1.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/catcat.png": "/portfolio/static/media/catcat.b79e682272d6e236a5ae.png",
     "static/media/hero.jpg": "/portfolio/static/media/hero.82c2b08d0793ef9ff336.jpg",
     "static/media/bootstrap-icons.woff?": "/portfolio/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
     "static/media/bootstrap-icons.woff2?": "/portfolio/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
     "static/media/cat.jpg": "/portfolio/static/media/cat.5c9096062243c8aef306.jpg",
+    "static/media/happy.jpg": "/portfolio/static/media/happy.69cf3fb64a75c23b49c6.jpg",
     "static/media/qut-logo.jpg": "/portfolio/static/media/qut-logo.59b2f0e77ca67a03edcc.jpg",
     "static/media/logo512.png": "/portfolio/static/media/logo512.ab004c1864f74b3f7156.png",
     "static/media/QUT-Logo.png": "/portfolio/static/media/QUT-Logo.376f18c691b18fa763c8.png",
     "index.html": "/portfolio/index.html",
-    "main.3e9a9a05.css.map": "/portfolio/static/css/main.3e9a9a05.css.map",
-    "main.847987c7.js.map": "/portfolio/static/js/main.847987c7.js.map",
+    "main.17cc72c2.css.map": "/portfolio/static/css/main.17cc72c2.css.map",
+    "main.081cbec1.js.map": "/portfolio/static/js/main.081cbec1.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e9a9a05.css",
-    "static/js/main.847987c7.js"
+    "static/css/main.17cc72c2.css",
+    "static/js/main.081cbec1.js"
   ]
 }
