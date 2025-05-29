@@ -13,6 +13,7 @@ function Navbar() {
     { name: "About", url: "/about" },
     { name: "Resume", url: "/resume" },
     { name: "Portfolio", url: "/portfolio" },
+    { name: "Extra", url:"/extra"}
   ];
   return (
     <header>

@@ -114,6 +114,19 @@ nav a:hover {
   margin: 300px;
 }
 
+#welcome-section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  padding: 50px;
+
+  background-color: pink;
+  outline: 2px solid white; /* white outline */
+}
+
+
 .welcome-font-header {
   font-size: 5rem;
   color: var(--main-white);
@@ -210,6 +223,20 @@ footer {
   overflow: hidden;
 }
 /* end hero */
+
+/*Hero 2*/
+.hero2 {
+  background-image: url("./assets/catcat.png");
+  height: 100vh;
+  max-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* Prevent content from overflowing */
+  overflow: hidden;
+}
+/*end Hero 2*/
 
 /* About-introduction section */
 .intro-div {

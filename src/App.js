@@ -9,6 +9,7 @@ import About from "./page/About";
 import Resume from "./page/Resume";
 import Portfolio from "./page/Portfolio";
 import Project from "./page/Project";
+import Extra from "./page/Extra"
 
 /*Import Section */
 
@@ -24,6 +25,7 @@ const route = createBrowserRouter(
         { path: "/resume", element: <Resume /> },
         { path: "/portfolio", element: <Portfolio /> },
         { path: "/project", element: <Project /> },
+        { path: "/extra", element: <Extra /> },
       ],
     },
   ],
